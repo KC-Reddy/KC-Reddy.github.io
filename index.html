@@ -4,7 +4,42 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Krishna — Data Scientist &amp; Applied ML Researcher</title>
-<meta name="description" content="Portfolio of Krishna, data scientist and applied ML researcher. Evidence-driven work, hypotheses tested in the open." />
+<meta name="description" content="Portfolio of Krishna Chaitanya Reddy Kothakapu, a Data Scientist specializing in applied machine learning and generative AI research — production RAG systems, predictive analytics, and evidence-driven independent research, hypotheses tested in the open." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Krishna Chaitanya Reddy Kothakapu — Data Scientist & Applied ML Researcher" />
+<meta property="og:description" content="Data Scientist specializing in applied machine learning and generative AI research — production RAG systems, predictive analytics, and evidence-driven independent research." />
+<meta property="og:image" content="assets/img/profile.jpeg" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Krishna Chaitanya Reddy Kothakapu",
+  "jobTitle": "Associate Data Scientist",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Relanto Global Pvt Ltd"
+  },
+  "sameAs": [
+    "https://github.com/KC-Reddy",
+    "https://www.linkedin.com/in/krishna69/"
+  ]
+}
+</script>
+
+<!-- Theme (applied before first paint to avoid a flash of the wrong theme) -->
+<script>
+(function () {
+  try {
+    if (window.localStorage.getItem("portfolio-theme") === "dark") {
+      document.documentElement.classList.add("theme-dark");
+    }
+  } catch (e) {}
+})();
+</script>
 
 <!-- Favicon -->
 <link rel="icon" href="data:," />
@@ -29,10 +64,10 @@
 
 <div id="preloader"></div>
 
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
-<button type="button" id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
-  <i class="bi bi-list"></i>
+<button type="button" id="sidebarToggle" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+  <i class="bi bi-list" aria-hidden="true"></i>
   <span>Menu</span>
 </button>
 
@@ -64,6 +99,10 @@
   </nav>
 
   <div class="sidebar-footer">
+    <button type="button" id="themeToggle" class="theme-toggle-btn" aria-pressed="false">
+      <i class="bi bi-moon-stars" aria-hidden="true"></i>
+      <span class="theme-toggle-label">Dark Mode</span>
+    </button>
     <a href="assets/docs/resume.pdf" download class="btn-hero sidebar-resume-btn">Download Résumé</a>
     <div class="social-links">
       <a href="https://github.com/KC-Reddy" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -91,14 +130,13 @@
         </div>
         <div class="col-lg-8 content" data-aos="fade-left" data-aos-delay="100">
           <h3>Who I Am</h3>
-          <p>I'm an Associate Data Scientist at Relanto Global, working across generative AI, predictive analytics, and enterprise machine learning, from production RAG systems to AI-driven forecasting used by enterprise clients. My work has been recognized with Relanto's Client Excellence Award and Emerging Data Scientist Award, the latter for developing automated analytics models that improved forecasting accuracy by 22%.</p>
+          <p>I'm a Data Scientist at Relanto Global, working across generative AI, predictive analytics, and enterprise machine learning, from production RAG systems to AI-driven forecasting used by enterprise clients. My work has been recognized with Relanto's Client Excellence Award and Emerging Data Scientist Award, the latter for developing automated analytics models that improved forecasting accuracy by 22%.</p>
           <p>Alongside my day-to-day work, I build independent research projects designed to test real hypotheses rather than just demonstrate a technique, including a satellite-based solar forecasting pipeline developed with Prof. Ali Al Humairi at the German University of Technology in Oman (GUtech). I've authored a peer-reviewed journal paper on deep learning for medical imaging, with three additional conference papers accepted for 2026. My academic foundation is in Data Science &amp; Engineering from Manipal Institute of Technology, where I also organized technical fests for 50+ volunteers and mentored 30+ students through peer-led workshops in my department's Data Science Club.</p>
-          <p>Looking ahead, I'm planning to apply for graduate study in Data Science or Applied AI for Fall 2027, aiming to deepen the same instinct that drives my independent work: build something, test it honestly, and trust the result even when it isn't the one you expected.</p>
 
           <ul class="info-list">
             <li><i class="bi bi-mortarboard"></i> <strong>Education</strong> Data Science &amp; Engineering, Manipal Institute of Technology</li>
-            <li><i class="bi bi-briefcase"></i> <strong>Current Role</strong> Associate Data Scientist, Relanto Global</li>
-            <li><i class="bi bi-bullseye"></i> <strong>Focus Areas</strong> Generative AI, Predictive Analytics, Enterprise ML</li>
+            <li><i class="bi bi-briefcase"></i> <strong>Current Role</strong> Data Scientist, Relanto Global</li>
+            <li><i class="bi bi-bullseye"></i> <strong>Focus Areas</strong> Generative AI, Predictive Analytics, Enterprise ML, Business Analytics</li>
             <li><i class="bi bi-geo-alt"></i> <strong>Based In</strong> Bangalore, India</li>
           </ul>
         </div>
@@ -157,49 +195,76 @@
           <p>A working toolkit spanning modeling, engineering, and communication — built for taking a project from raw data to a defensible, tested conclusion.</p>
         </div>
         <div class="col-lg-8" data-aos="fade-left" data-aos-delay="100">
-          <div class="progress-item">
-            <div class="skill-label"><span>Python</span><span class="val">95%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="95"></div></div>
+          <div class="skill-category">
+            <h3 class="skill-category-title"><i class="bi bi-code-slash"></i> Programming</h3>
+            <div class="progress-item">
+              <div class="skill-label"><span>Python</span><span class="val">95%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="95"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>SQL</span><span class="val">80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>C++</span><span class="val">75%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="75"></div></div>
+            </div>
           </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Generative AI &amp; LLMs (RAG, Prompt Engineering)</span><span class="val">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title"><i class="bi bi-bar-chart"></i> Machine Learning</h3>
+            <div class="progress-item">
+              <div class="skill-label"><span>Machine Learning &amp; Predictive Analytics</span><span class="val">90%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>Problem Solving</span><span class="val">85%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="85"></div></div>
+            </div>
           </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Machine Learning &amp; Predictive Analytics</span><span class="val">90%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title"><i class="bi bi-cpu"></i> Deep Learning &amp; Generative AI</h3>
+            <div class="progress-item">
+              <div class="skill-label"><span>Deep Learning (PyTorch/TensorFlow)</span><span class="val">80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>Generative AI &amp; LLMs (RAG, Prompt Engineering)</span><span class="val">90%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="90"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>Natural Language Processing</span><span class="val">80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+            </div>
           </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Problem Solving</span><span class="val">85%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="85"></div></div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title"><i class="bi bi-cloud"></i> Cloud &amp; Infrastructure</h3>
+            <div class="progress-item">
+              <div class="skill-label"><span>Cloud &amp; Deployment (GCP, Docker, Snowflake)</span><span class="val">75%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="75"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>REST API</span><span class="val">80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>Git &amp; Version Control</span><span class="val">75%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="75"></div></div>
+            </div>
           </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Deep Learning (PyTorch/TensorFlow)</span><span class="val">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="80"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Natural Language Processing</span><span class="val">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="80"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>REST API</span><span class="val">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="80"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>SQL &amp; Data Modeling</span><span class="val">80%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="80"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Cloud &amp; Deployment (GCP, Docker, Snowflake)</span><span class="val">75%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="75"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Git &amp; Version Control</span><span class="val">75%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="75"></div></div>
-          </div>
-          <div class="progress-item">
-            <div class="skill-label"><span>Data Visualization (Matplotlib, Power BI)</span><span class="val">75%</span></div>
-            <div class="progress"><div class="progress-bar" data-width="75"></div></div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title"><i class="bi bi-pie-chart"></i> Data &amp; Visualization</h3>
+            <div class="progress-item">
+              <div class="skill-label"><span>SQL &amp; Data Modeling</span><span class="val">80%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="80"></div></div>
+            </div>
+            <div class="progress-item">
+              <div class="skill-label"><span>Data Visualization (Matplotlib, Power BI)</span><span class="val">75%</span></div>
+              <div class="progress"><div class="progress-bar" data-width="75"></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -218,12 +283,12 @@
         <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
           <div class="resume-item">
             <div class="resume-date">August 2024 — Present</div>
-            <h4>Associate Data Scientist</h4>
-            <h5>Relanto Global Pvt Ltd</h5>
+            <h3>Associate Data Scientist</h3>
+            <h4>Relanto Global Pvt Ltd</h4>
             <ul>
               <li>Designed and integrated an AI-powered chatbot into Relanto's Anaplan-based enterprise planning platform (Smart Tactic), enabling conversational data extraction and AI-driven planning suggestions, as the data science/ML lead on a cross-functional Anaplan implementation team</li>
               <li>Built an intelligent invoice processing platform using OCR and RAG for Cisco, cutting processing latency by 40% through Amazon Textract and Redis caching</li>
-              <li>Developed a demand forecasting platform for Google using time-series ML models, automated ETL pipelines, and Power BI dashboards for forecast tracking</li>
+              <li>Developed a demand forecasting platform for Google using time-series ML models, automated ETL pipelines, and Power BI dashboards for forecast tracking, part of the automated analytics work recognized with Relanto's Emerging Data Scientist Award for improving forecasting accuracy by 22%</li>
               <li>Built an internal AI-driven infrastructure automation bot across AWS and GCP, reducing manual cloud operations by over 50%</li>
               <li>Built and deployed ML forecasting models supporting FP&amp;A use cases for enterprise clients including RingCentral and IMAX, integrating with Anaplan's Data Orchestrator and cloud data sources (Snowflake, AWS S3) via API</li>
               <li>Contributed ML/chatbot integration for an AI-powered assistant project delivered to Google, exposing data through export APIs and coordinating with Docker-deployed AI microservices</li>
@@ -233,8 +298,8 @@
           </div>
           <div class="resume-item">
             <div class="resume-date">February 2024 — August 2024</div>
-            <h4>Data Science Intern</h4>
-            <h5>Relanto Global Pvt Ltd</h5>
+            <h3>Data Science Intern</h3>
+            <h4>Relanto Global Pvt Ltd</h4>
             <ul>
               <li>Completed a 6-month internship in Generative AI, Machine Learning, and Web Development, gaining hands-on experience in end-to-end project execution</li>
               <li>Developed and deployed a responsive e-commerce website using HTML, React.js, and JavaScript, integrating dynamic product listings and shopping cart functionality</li>
@@ -244,8 +309,8 @@
           </div>
           <div class="resume-item">
             <div class="resume-date">May 2023 — July 2023</div>
-            <h4>Intern, Full-Stack Development (Python)</h4>
-            <h5>Zypher Technologies and Solutions Pvt Ltd</h5>
+            <h3>Intern, Full-Stack Development (Python)</h3>
+            <h4>Zypher Technologies and Solutions Pvt Ltd</h4>
             <ul>
               <li>Designed and developed EventHub, a full-stack event management and ticket booking system, using Python (Django), Django REST Framework, PostgreSQL, Bootstrap, and JavaScript</li>
               <li>Built secure authentication and authorization, RESTful APIs, and event management functionality</li>
@@ -470,6 +535,19 @@
         </div>
       </div>
       </div>
+
+      <div class="currently-exploring" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="currently-exploring-title">Currently Exploring</h3>
+        <p class="currently-exploring-intro">Topics I'm actively reading about and experimenting with outside of formal projects.</p>
+        <ul class="chip-list">
+          <li class="chip">GraphRAG</li>
+          <li class="chip">Agentic AI Systems</li>
+          <li class="chip">Reasoning Models</li>
+          <li class="chip">Long-Context LLMs</li>
+          <li class="chip">Model Evaluation Methodology</li>
+          <li class="chip">Vision-Language Models</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -530,25 +608,25 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="ach-hackathon-modal-label">Winner: Relanto Global Internal Hackathon</h5>
+              <h2 class="modal-title" id="ach-hackathon-modal-label">Winner: Relanto Global Internal Hackathon</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Competed in Relanto Global's company-wide AI innovation hackathon as part of a 5-member team, building an AI-powered inventory demand forecasting solution for the FMCG skincare sector. Secured 1st place, winning a ₹10,000 cash prize.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Predictive Analytics, Time-Series Forecasting, Dashboarding, Team Collaboration, Rapid Prototyping</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Combined statistical forecasting techniques, predictive analytics, and external feature integration into a single forecasting solution</li>
                     <li>Designed interactive dashboards for scenario analysis and inventory optimization</li>
                     <li>Collaborated within a 5-member cross-functional team under hackathon time constraints</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Won 1st place among all company-wide hackathon submissions</li>
                     <li>Delivered a working inventory demand forecasting prototype for the FMCG skincare sector</li>
@@ -565,24 +643,24 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="ach-client-excellence-modal-label">Award: Client Excellence Award, Wipro</h5>
+              <h2 class="modal-title" id="ach-client-excellence-modal-label">Award: Client Excellence Award, Wipro</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Awarded Relanto's Client Excellence Award for delivering a time-critical enterprise deployment strictly within the expected timeline, with zero bugs or defects.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Enterprise Delivery, Quality Assurance, Client Management, Deadline Management</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Delivered an enterprise client deployment under a strict, time-critical deadline</li>
                     <li>Held delivery to a zero-bug, zero-defect standard through the release</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Set a new quality benchmark for the project team</li>
                     <li>Reinforced client confidence in delivery reliability</li>
@@ -598,24 +676,24 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="ach-emerging-ds-modal-label">Award: Emerging Data Scientist Award, Relanto AI</h5>
+              <h2 class="modal-title" id="ach-emerging-ds-modal-label">Award: Emerging Data Scientist Award, Relanto AI</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Awarded Relanto's Emerging Data Scientist Award for developing automated analytics models that improved forecasting accuracy by 22%.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Predictive Modeling, Automated Analytics, Forecasting, Applied Machine Learning</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Developed automated analytics models for enterprise forecasting use cases</li>
                     <li>Iterated on the modeling approach to raise forecasting accuracy</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Improved forecasting accuracy by 22% over the prior approach</li>
                     <li>Recognized company-wide as an emerging contributor in data science</li>
@@ -631,24 +709,24 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="ach-chegg-sme-modal-label">Certified: Chegg Subject Matter Expert</h5>
+              <h2 class="modal-title" id="ach-chegg-sme-modal-label">Certified: Chegg Subject Matter Expert</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Certified as a Subject Matter Expert (SME) for Chegg, recognized for subject-area expertise and content review.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Subject-Matter Expertise, Technical Review, Written Communication</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Reviewed and validated subject-area content for accuracy</li>
                     <li>Applied subject-matter expertise to answer and evaluate technical questions</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Certified as a Chegg Subject Matter Expert based on demonstrated domain knowledge</li>
                   </ul>
@@ -739,25 +817,25 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-posh-modal-label">Lead &mdash; POSH Internal Committee, Relanto Global</h5>
+              <h2 class="modal-title" id="lead-posh-modal-label">Lead &mdash; POSH Internal Committee, Relanto Global</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Established and led the POSH Internal Committee at Relanto Global, ensuring statutory compliance with workplace safety regulations and creating a structured process for awareness and grievance redressal.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Leadership, Policy Implementation, Compliance, Employee Advocacy</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Formed the internal committee structure in line with statutory POSH requirements</li>
                     <li>Led awareness initiatives and training sessions for employees</li>
                     <li>Established a structured grievance redressal process</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Ensured organizational compliance with workplace safety regulations</li>
                     <li>Built a trusted internal process for employee safety and reporting</li>
@@ -773,23 +851,23 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-techfest-modal-label">Organizer: Technical Fest, MIT Manipal</h5>
+              <h2 class="modal-title" id="lead-techfest-modal-label">Organizer: Technical Fest, MIT Manipal</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
-                  <p>Organized technical fests at Manipal Institute of Technology, taking ownership of end-to-end event execution.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Overview</h3>
+                  <p>Organized technical fests at Manipal Institute of Technology, taking ownership of end-to-end event execution and coordinating a team of 50+ volunteers.</p>
+                  <h3>Skills Used</h3>
                   <p>Event Planning, Team Coordination, Volunteer Management</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Coordinated a team of 50+ volunteers across event operations</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Successfully delivered technical fest events with a 50+ volunteer team</li>
                   </ul>
@@ -804,23 +882,23 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-dsclub-modal-label">Mentor: Data Science Club, MIT Manipal</h5>
+              <h2 class="modal-title" id="lead-dsclub-modal-label">Mentor: Data Science Club, MIT Manipal</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
-                  <p>Mentored students in the Data Science Club at MIT Manipal through peer-led workshops.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Overview</h3>
+                  <p>Mentored 30+ students in the Data Science Club at MIT Manipal through peer-led workshops.</p>
+                  <h3>Skills Used</h3>
                   <p>Mentoring, Workshop Facilitation, Data Science</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Designed and delivered peer-led data science workshops</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Mentored 30+ students through the club's workshop program</li>
                   </ul>
@@ -835,24 +913,24 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-cricket-modal-label">Organizer: Inter-College Cricket Tournament, Manipal</h5>
+              <h2 class="modal-title" id="lead-cricket-modal-label">Organizer: Inter-College Cricket Tournament, Manipal</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Organized an inter-college cricket tournament in Manipal, coordinating logistics and participation across colleges.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Event Organization, Logistics, Team Coordination</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Coordinated tournament logistics and on-ground execution</li>
                     <li>Organized participation across multiple colleges</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Successfully delivered an inter-college cricket tournament in Manipal</li>
                   </ul>
@@ -867,23 +945,23 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-gurakonda-modal-label">Volunteer: Rural Education Outreach, Gurakonda Village</h5>
+              <h2 class="modal-title" id="lead-gurakonda-modal-label">Volunteer: Rural Education Outreach, Gurakonda Village</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Volunteered in a rural education outreach program at Gurakonda Village, supporting local education initiatives.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Community Outreach, Volunteering, Communication</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Supported on-the-ground rural education outreach activities at Gurakonda Village</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Contributed to a rural community education initiative at Gurakonda Village</li>
                   </ul>
@@ -898,25 +976,25 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="lead-hamptatrek-modal-label">Organizer &amp; Team Lead: Hampta Pass Trek</h5>
+              <h2 class="modal-title" id="lead-hamptatrek-modal-label">Organizer &amp; Team Lead: Hampta Pass Trek</h2>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="achievement-modal-grid">
                 <div class="achievement-modal-col">
-                  <h4>Overview</h4>
+                  <h3>Overview</h3>
                   <p>Organized and led a multi-day trek to Hampta Pass in collaboration with Trek up India, for a group gathered from multiple regions across India.</p>
-                  <h4>Skills Used</h4>
+                  <h3>Skills Used</h3>
                   <p>Expedition Leadership, Logistics Planning, Risk Management, Team Coordination</p>
                 </div>
                 <div class="achievement-modal-col">
-                  <h4>Key Responsibilities</h4>
+                  <h3>Key Responsibilities</h3>
                   <ul>
                     <li>Coordinated logistics and safety planning for the expedition</li>
                     <li>Managed participant coordination for a group gathered from multiple regions across India</li>
                     <li>Led itinerary execution and on-ground problem-solving in a remote, physically demanding environment</li>
                   </ul>
-                  <h4>Impact &amp; Achievements</h4>
+                  <h3>Impact &amp; Achievements</h3>
                   <ul>
                     <li>Successfully led the group through a multi-day trek in a remote, high-altitude environment</li>
                   </ul>
@@ -945,7 +1023,7 @@
               data-cert-name="Amazon ML Summer School 2023"
               data-cert-meta="Completed · 2023"
               data-cert-desc="Completed Amazon ML Summer School 2023, an integrated learning program covering Supervised Learning, Deep Neural Networks, Dimensionality Reduction, Unsupervised Learning, Probabilistic Graphical Models, Sequential Learning, Causal Inference, and Reinforcement Learning.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/amazon-ml-summer-school.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/amazon-ml-summer-school.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">Amazon ML Summer School 2023</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -961,7 +1039,7 @@
               data-cert-name="Build with AI Bootcamp — Google for Developers &amp; H2S"
               data-cert-meta="Completed"
               data-cert-desc="Completed Build with AI Bootcamp (Bengaluru), demonstrating hands-on technical skills in building AI agents, architecting workflows, and integrating generative AI into production-ready systems.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/build-with-ai-bootcamp.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/build-with-ai-bootcamp.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">Build with AI Bootcamp</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -977,7 +1055,7 @@
               data-cert-name="NPTEL Elite Certification — The Joy of Computing using Python"
               data-cert-meta="Completed"
               data-cert-desc="Completed a 12-week IIT Madras (NPTEL) certification with a consolidated score of 91%, ranked in the top 2% among 9,957 certified candidates nationwide.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/nptel-python.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/nptel-python.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">NPTEL — Joy of Computing (Python)</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -993,7 +1071,7 @@
               data-cert-name="Microsoft Certified: Power Platform Fundamentals"
               data-cert-meta="Completed · 2023"
               data-cert-desc="Earned May 2023. Verified Microsoft credential covering Power Platform fundamentals.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/microsoft-power-platform.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/microsoft-power-platform.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">MS: Power Platform Fundamentals</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1009,7 +1087,7 @@
               data-cert-name="Microsoft Certified: Azure Data Fundamentals"
               data-cert-meta="Completed · 2023"
               data-cert-desc="Earned May 2023. Verified Microsoft credential covering Azure data fundamentals.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/microsoft-azure-data.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/microsoft-azure-data.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">MS: Azure Data Fundamentals</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1025,7 +1103,7 @@
               data-cert-name="Oracle Certified Professional — OCI 2025 Certified Data Science Professional"
               data-cert-meta="Completed · 2025"
               data-cert-desc="Earned August 2025. Oracle Cloud Infrastructure certification recognized by Oracle Corporation as Oracle Certified Professional in Data Science.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/oracle-oci-data-science.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/oracle-oci-data-science.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">Oracle OCI Data Science Professional</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1041,7 +1119,7 @@
               data-cert-name="HackerRank Certified — Python"
               data-cert-meta="Completed"
               data-cert-desc="HackerRank certification validating proficiency in Python programming fundamentals and problem-solving.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-python.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-python.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">HackerRank — Python</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1057,7 +1135,7 @@
               data-cert-name="HackerRank Certified — SQL"
               data-cert-meta="Completed"
               data-cert-desc="HackerRank certification validating proficiency in SQL querying and database fundamentals.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-sql.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-sql.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">HackerRank — SQL</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1073,7 +1151,7 @@
               data-cert-name="HackerRank Certified — Problem Solving"
               data-cert-meta="Completed"
               data-cert-desc="HackerRank certification validating algorithmic problem-solving and data structures proficiency.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-problem-solving.png');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-problem-solving.png');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">HackerRank — Problem Solving</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1089,7 +1167,7 @@
               data-cert-name="HackerRank Certified — REST API"
               data-cert-meta="Completed"
               data-cert-desc="HackerRank certification validating proficiency in REST API design and implementation concepts.">
-              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-rest-api.jpg');"><i class="bi bi-patch-check"></i></span>
+              <span class="cert-thumb-img has-image" style="background-image:url('assets/img/certifications/hackerrank-rest-api.jpg');" aria-hidden="true"><i class="bi bi-patch-check"></i></span>
               <span class="cert-thumb-label">HackerRank — REST API</span>
             </button>
             <div class="cert-card-hover-actions">
@@ -1106,7 +1184,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content cert-modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="certModalLabel">Certificate</h5>
+            <h2 class="modal-title" id="certModalLabel">Certificate</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -1137,7 +1215,7 @@
             <div class="testimonial-item">
               <i class="bi bi-quote quote-icon"></i>
               <p>"Krishna has been a sincere and inquisitive student with a genuine interest in learning beyond the classroom. Throughout his academic journey, he has consistently demonstrated curiosity toward emerging technologies, particularly in Artificial Intelligence and Data Science, and has shown the initiative to strengthen his understanding through independent projects and practical applications. What distinguishes Krishna is his willingness to take on challenging problems and approach them with patience and analytical thinking. He actively participates in technical discussions, readily accepts feedback, and strives to improve both his technical and professional skills. His ability to connect theoretical concepts with practical implementation reflects a mature approach to learning. I believe Krishna possesses the dedication, discipline, and technical foundation required to succeed in higher studies and research, and I am confident he will continue to contribute meaningfully to the field of computing."</p>
-              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/archana-h.png');"><i class="bi bi-person-circle"></i></div>
+              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/archana-h.png');" aria-hidden="true"><i class="bi bi-person-circle"></i></div>
               <h3>Prof. Archana H</h3>
               <h4>Assistant Professor – Senior Scale, Manipal Institute of Technology (MAHE)</h4>
             </div>
@@ -1146,7 +1224,7 @@
             <div class="testimonial-item">
               <i class="bi bi-quote quote-icon"></i>
               <p>"I've had the opportunity to interact with Krishna on multiple technical discussions and have been impressed by his passion for Artificial Intelligence and software engineering. He approaches problems with curiosity and is always willing to explore different solutions before arriving at the most effective one. Krishna demonstrates a solid understanding of AI concepts and has consistently shown the ability to translate ideas into working solutions through hands-on projects. What I appreciate most is his eagerness to learn, openness to feedback, and determination to continuously improve his technical skills. With his learning mindset and commitment to building practical solutions, I believe Krishna has the potential to become a capable AI engineer and make valuable contributions to the industry."</p>
-              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/sunny-ramvilas.jpg');"><i class="bi bi-person-circle"></i></div>
+              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/sunny-ramvilas.jpg');" aria-hidden="true"><i class="bi bi-person-circle"></i></div>
               <h3>Sunny Ramvilas</h3>
               <h4>AI Architect, Relanto</h4>
             </div>
@@ -1155,7 +1233,7 @@
             <div class="testimonial-item">
               <i class="bi bi-quote quote-icon"></i>
               <p>"During his research internship under my supervision at the German University of Technology in Oman, Krishna demonstrated enthusiasm for research and a genuine willingness to explore new ideas. He approached research tasks with dedication, showed a good understanding of technical concepts, and was always eager to learn unfamiliar methodologies. Throughout the internship, Krishna displayed analytical thinking and a structured approach to problem-solving. He participated actively in technical discussions, accepted constructive feedback positively, and consistently worked toward improving the quality of his work. His commitment to learning and his interest in applying Artificial Intelligence to research problems were evident throughout the project. Krishna has the qualities that are important for a young researcher—curiosity, perseverance, and the ability to learn independently. I am confident that these qualities will continue to support his academic and professional growth."</p>
-              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/ali-al-humairi.gif');"><i class="bi bi-person-circle"></i></div>
+              <div class="testimonial-img has-image" style="background-image:url('assets/img/testimonials/ali-al-humairi.gif');" aria-hidden="true"><i class="bi bi-person-circle"></i></div>
               <h3>Prof. Ali Al Humairi</h3>
               <h4>Professor of Computer Science, German University of Technology in Oman (GUtech), Oman</h4>
             </div>

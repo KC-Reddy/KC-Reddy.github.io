@@ -35,6 +35,30 @@
   --contrast-color: #ffffff;
 }
 
+/*--------------------------------------------------------------
+# Light/Dark theme toggle
+--------------------------------------------------------------*/
+html.theme-dark {
+  --background-color: #0d1110;
+  --default-color: #d6d9d6;
+  --heading-color: #ffffff;
+  --accent-color: #1f6f64;
+  --accent-color-rgb: 31, 111, 100;
+  --surface-color: #171b1a;
+  --contrast-color: #ffffff;
+
+  --nav-color: #d6d9d6;
+  --nav-hover-color: #1f6f64;
+  --nav-mobile-background-color: #171b1a;
+  --nav-dropdown-background-color: #171b1a;
+  --nav-dropdown-color: #d6d9d6;
+}
+
+html.theme-dark .light-background {
+  --background-color: #141918;
+  --surface-color: #1c211f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -79,6 +103,41 @@ img {
 ::selection {
   background: var(--accent-color);
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Accessibility: focus states & reduced motion
+--------------------------------------------------------------*/
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .stat-box:hover,
+  .project-card:hover,
+  .icon-box:hover,
+  .achievement-card:hover,
+  .cert-thumb-btn:hover,
+  .cert-card:hover .cert-thumb-btn,
+  .contact .info-box:hover,
+  .scroll-top:hover,
+  .social-links a:hover,
+  .chip:hover {
+    transform: none;
+  }
 }
 
 .container, .container-fluid {
@@ -324,6 +383,34 @@ img {
   padding: 11px 20px;
   font-size: 13px;
   margin-bottom: 16px;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 14px;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.theme-toggle-btn i {
+  font-size: 15px;
 }
 
 .sidebar-footer .social-links a {
@@ -605,8 +692,39 @@ section {
   margin-bottom: 16px;
 }
 
+.skill-category {
+  margin-bottom: 28px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--accent-color);
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+.skill-category-title i {
+  font-size: 16px;
+}
+
 .progress-item {
   margin-bottom: 22px;
+}
+
+.skill-category .progress-item:last-child {
+  margin-bottom: 0;
 }
 
 .progress-item .skill-label {
@@ -918,11 +1036,11 @@ section {
   border-radius: 50%;
   left: -8px;
   top: 4px;
-  background: #fff;
+  background: var(--surface-color);
   border: 3px solid var(--accent-color);
 }
 
-.resume-item h4 {
+.resume-item h3 {
   line-height: 1.2;
   font-size: 19px;
   font-weight: 700;
@@ -943,7 +1061,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume-item h5 {
+.resume-item h4 {
   font-size: 14px;
   font-style: italic;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1030,6 +1148,58 @@ section {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Currently Exploring (chip list)
+--------------------------------------------------------------*/
+.currently-exploring {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  text-align: center;
+}
+
+.currently-exploring-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.currently-exploring-intro {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  max-width: 560px;
+  margin: 0 auto 20px;
+}
+
+.chip-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.chip {
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 65%);
+  padding: 8px 18px;
+  border-radius: 50px;
+  transition: 0.25s;
+}
+
+.chip:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
@@ -1149,7 +1319,7 @@ section {
   }
 }
 
-.achievement-modal-col h4 {
+.achievement-modal-col h3 {
   font-family: var(--nav-font);
   font-size: 12px;
   font-weight: 700;
@@ -1159,7 +1329,7 @@ section {
   margin: 22px 0 8px;
 }
 
-.achievement-modal-col h4:first-child {
+.achievement-modal-col h3:first-child {
   margin-top: 0;
 }
 

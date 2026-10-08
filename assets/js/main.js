@@ -32,6 +32,36 @@
   document.addEventListener("scroll", toggleScrollTop);
 
   /**
+   * Light/dark theme toggle (default: light; choice persisted in
+   * localStorage; the actual class is applied before first paint by an
+   * inline script in <head> to avoid a flash of the wrong theme)
+   */
+  var themeToggleBtn = document.getElementById("themeToggle");
+  var THEME_STORAGE_KEY = "portfolio-theme";
+
+  function applyTheme(isDark) {
+    document.documentElement.classList.toggle("theme-dark", isDark);
+    if (themeToggleBtn) {
+      themeToggleBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
+      var label = themeToggleBtn.querySelector(".theme-toggle-label");
+      if (label) label.textContent = isDark ? "Light Mode" : "Dark Mode";
+      var icon = themeToggleBtn.querySelector("i");
+      if (icon) icon.className = isDark ? "bi bi-sun" : "bi bi-moon-stars";
+    }
+  }
+
+  if (themeToggleBtn) {
+    applyTheme(document.documentElement.classList.contains("theme-dark"));
+    themeToggleBtn.addEventListener("click", function () {
+      var isDark = !document.documentElement.classList.contains("theme-dark");
+      applyTheme(isDark);
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, isDark ? "dark" : "light");
+      } catch (e) {}
+    });
+  }
+
+  /**
    * Sidebar: mobile off-canvas toggle
    */
   var sidebar = document.getElementById("sidebar");
