@@ -1208,7 +1208,7 @@ section {
 .achievement-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  align-items: start;
+  align-items: stretch;
   gap: 24px;
 }
 
